@@ -35,7 +35,6 @@ import sys
 import datetime
 
 
-
 def fetch_feed_last_entry(feed_url):
     '''Fetch a feed from a given string'''
 
@@ -43,9 +42,8 @@ def fetch_feed_last_entry(feed_url):
         myfeed = feedparser.parse(feed_url)
     except:
         output = 'Could not parse URL (%s)' % feed_url
-        exitcritical(output, perfdata)
+        exitcritical(output, '')
 
-    print myfeed
     if (myfeed.status != 200):
         exitcritical('Status %s - %s' % (myfeed.status, myfeed.feed.summary), '')
 
