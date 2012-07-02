@@ -1,10 +1,13 @@
 
+check_rss
+=========
+
 
 First version taken from http://john.wesorick.com/2011/10/nagios-plugin-checkrss.html
 
 
  Added 
- =====
+------
 
  - Support for empty feed
  - global clean up, pylint and pep8 almost silent
@@ -12,7 +15,7 @@ First version taken from http://john.wesorick.com/2011/10/nagios-plugin-checkrss
 
 
 Usage 
-=====
+-----
 
 Pick a rss feed from your provider :
 
@@ -28,3 +31,4 @@ In nagios
 define command
 
 define service check_rss!s3-us-west-2
+
