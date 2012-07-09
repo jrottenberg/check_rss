@@ -1,13 +1,14 @@
 #!/usr/bin/env python
 
 '''
-check_rss v .3 - A simple Nagios plugin to check an RSS feed.
+check_rss - A simple Nagios plugin to check an RSS feed.
 Created to monitor status of cloud services.
 
 Requires feedparser and argparse python libraries.
-For Ubuntu you can install with :
 
-  sudo apt-get install python-feedparser python-argparse
+  python-feedparser python-argparse
+
+on Debian or Redhat based systems
 
 If you find it useful, feel free to leave me a comment/email
 at  http://john.wesorick.com.
