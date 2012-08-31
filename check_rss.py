@@ -127,7 +127,7 @@ def main(argv=None):
 
     # Parse our feed, getting title, description and link of newest entry.
     rssfeed = args.rssfeed
-    if (rssfeed.find('http://') != 0):
+    if (rssfeed.find('http://') != 0 and rssfeed.find('https://') != 0):
         rssfeed = 'http://{rssfeed}'.format(rssfeed=rssfeed)
 
     # we have everything we need, let's start 
