@@ -45,6 +45,8 @@ def fetch_feed_last_entry(feed_url):
         output = 'Could not parse URL (%s)' % feed_url
         exitcritical(output, '')
 
+    if myfeed.bozo != 0:
+        exitcritical('Malformed feed: %s' % (myfeed.bozo_exception), '')
     if (myfeed.status != 200):
         exitcritical('Status %s - %s' % (myfeed.status, myfeed.feed.summary), '')
 
