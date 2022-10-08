@@ -210,25 +210,25 @@ def main(argv=None):
 
 def exitok(output, perfdata):
     if (perfdata):
-        print "OK - %s|'RSS'=0;1;2;0;2" % output
+        print("OK - %s|'RSS'=0;1;2;0;2" % output)
     else:
-        print 'OK - %s' % output
+        print ('OK - %s' % output)
     sys.exit(0)
 
 
 def exitwarning(output, perfdata):
     if (perfdata):
-        print "WARNING - %s|'RSS'=1;1;2;0;2" % output
+        print ("WARNING - %s|'RSS'=1;1;2;0;2" % output)
     else:
-        print 'WARNING - %s' % output
+        print('WARNING - %s' % output)
     sys.exit(1)
 
 
 def exitcritical(output, perfdata):
     if (perfdata):
-        print "CRITICAL - %s|'RSS'=2;1;2;0;2" % output
+        print("CRITICAL - %s|'RSS'=2;1;2;0;2" % output)
     else:
-        print 'CRITICAL - %s' % output
+        print('CRITICAL - %s' % output)
     sys.exit(2)
 
 
