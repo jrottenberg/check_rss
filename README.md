@@ -5,7 +5,7 @@ check_rss
 First version taken from http://john.wesorick.com/2011/10/nagios-plugin-checkrss.html
 
 
- Added 
+ Added
 ------
 
  - Support for empty feed
@@ -13,7 +13,7 @@ First version taken from http://john.wesorick.com/2011/10/nagios-plugin-checkrss
 
 
 
-Usage 
+Usage
 -----
 
 Pick a rss feed from your provider :
@@ -22,18 +22,18 @@ Pick a rss feed from your provider :
  * Google - http://www.google.com/appsstatus
 
 
-Copy check_rss.py into your plugins directory 
+Copy check_rss.py into your plugins directory
 '$USER1$' in /etc/nagios/private/resource.cfg
 
 
-- - - 
+- - -
 
-### Amazon 
+### Amazon
 
 Example :
   check_rss.py -T 1  http://status.aws.amazon.com/rss/s3-us-west-2.rss
 
-Get service list from : 
+Get service list from :
   curl -s http://status.aws.amazon.com | grep rss | cut -d '"' -f 4
 
      define command{
@@ -47,7 +47,7 @@ Get service list from :
           check_command         check_aws_status!s3-us-west-2!1
           host_name             localhost
       }
-      
+
 - - -
 
 ### Google apps
@@ -59,9 +59,7 @@ Get service list from :
 
      define service{
          use                   generic-service
-         service_description   google apps status 
+         service_description   google apps status
          check_command         check_google_apps_status!1
          host_name             localhost
     }
-
-
